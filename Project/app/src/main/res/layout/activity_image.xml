@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:weightSum="1"
+        android:id="@+id/appBarLayout">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.08"
+            android:fontFamily="cursive"
+            android:text="Mall"
+            android:textSize="32sp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:hint="@string/description"
+        android:id="@+id/Description" />
+
+    <TextView
+        android:id="@+id/GoToLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:layout_marginTop="22dp"
+        android:text="Go to location"
+        android:layout_below="@+id/Description"
+        android:layout_alignLeft="@+id/Description"
+        android:layout_alignStart="@+id/Description" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/showOnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        android:layout_alignTop="@+id/GoToLoc"
+        android:layout_alignRight="@+id/Description"
+        android:layout_alignEnd="@+id/Description" />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/photo"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_below="@+id/map"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="89dp"-->
+        <!--android:background="@android:drawable/ic_menu_camera"/>-->
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/showOnMap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/showOnMap"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/showOnMap"
+        android:layout_marginBottom="48dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+</RelativeLayout>
